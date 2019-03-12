@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cine", "Cine\Cine.vcxproj", "{C40B6A45-4008-4118-B760-C1DFCCB46DEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C40B6A45-4008-4118-B760-C1DFCCB46DEA}.Debug|x64.ActiveCfg = Debug|x64
+		{C40B6A45-4008-4118-B760-C1DFCCB46DEA}.Debug|x64.Build.0 = Debug|x64
+		{C40B6A45-4008-4118-B760-C1DFCCB46DEA}.Debug|x86.ActiveCfg = Debug|Win32
+		{C40B6A45-4008-4118-B760-C1DFCCB46DEA}.Debug|x86.Build.0 = Debug|Win32
+		{C40B6A45-4008-4118-B760-C1DFCCB46DEA}.Release|x64.ActiveCfg = Release|x64
+		{C40B6A45-4008-4118-B760-C1DFCCB46DEA}.Release|x64.Build.0 = Release|x64
+		{C40B6A45-4008-4118-B760-C1DFCCB46DEA}.Release|x86.ActiveCfg = Release|Win32
+		{C40B6A45-4008-4118-B760-C1DFCCB46DEA}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0649A0B3-806B-46C1-95C2-C8F5F71A63C0}
+	EndGlobalSection
+EndGlobal
