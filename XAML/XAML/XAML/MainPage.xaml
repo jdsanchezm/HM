@@ -4,14 +4,13 @@
              xmlns:local="clr-namespace:XAML"
              x:Class="XAML.MainPage">
 
-    <StackLayout BackgroundColor="DarkSlateBlue" Margin="30,50" Padding="10,20">
-        <!--Padding = Thickness(<,^,>,_)-->
-        <!-- 30<> 50 ^_ -->
-        <Grid BackgroundColor="Gray">
+    <StackLayout BackgroundColor="Gray" Margin="30,50" Padding="10,20">
+       
+      <!--  <Grid BackgroundColor="Gray">
             <Grid.RowDefinitions>
-                <RowDefinition Height="25%"/>
+                <RowDefinition Height="15"/>
                 <RowDefinition Height="50%"/>
-                <RowDefinition Height="25%"/>
+                <RowDefinition Height="15%"/>
 
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -19,14 +18,14 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-        </Grid>
+        </Grid>-->
         <Label Text="Hola Mundo!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand"/>
         <!-- Grid.Column="1" Grid.Row="1"-->
         <Button Text="Opción"  FontSize="Small"></Button>
         <!-- Grid.Column="1" Grid.Row="2"-->
-        <Image Source="icon.png"></Image> <!--Grid.Column="2" Grid.Row="0" -->
+       <!-- <Image Source="icon.png"></Image> Grid.Column="2" Grid.Row="0" -->
     </StackLayout>
 
 </ContentPage>

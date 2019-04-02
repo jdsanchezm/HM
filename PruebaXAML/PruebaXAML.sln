@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaXAML.Android", "PruebaXAML\PruebaXAML.Android\PruebaXAML.Android.csproj", "{4C37FD98-9813-4954-8715-7273F90C8E7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaXAML", "PruebaXAML\PruebaXAML\PruebaXAML.csproj", "{D4905736-4A59-4061-B17A-DBCEC53DE064}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C37FD98-9813-4954-8715-7273F90C8E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C37FD98-9813-4954-8715-7273F90C8E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C37FD98-9813-4954-8715-7273F90C8E7C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4C37FD98-9813-4954-8715-7273F90C8E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C37FD98-9813-4954-8715-7273F90C8E7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C37FD98-9813-4954-8715-7273F90C8E7C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D4905736-4A59-4061-B17A-DBCEC53DE064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4905736-4A59-4061-B17A-DBCEC53DE064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4905736-4A59-4061-B17A-DBCEC53DE064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4905736-4A59-4061-B17A-DBCEC53DE064}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53432CD2-404F-49C7-A564-838B648411F5}
+	EndGlobalSection
+EndGlobal

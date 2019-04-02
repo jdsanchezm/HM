@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PruebaXAML"
+             x:Class="PruebaXAML.MainPage">
+    
+    <Grid>
+        <!-- Place new controls here -->
+        <Image Source="http://satiro.es/wp-content/uploads/2015/06/IMG_0975.jpg" Aspect="AspectFill" />
+        <BoxView Color="#1D3196" Opacity="0.4"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="25"></ColumnDefinition></Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition></Grid.RowDefinitions>
+            
+            <Label  Text="Hola Juan!" 
+                    FontSize="40"
+                    TextColor="White"
+                    FontFamily="Gothic"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    Grid.Column="1" Grid.Row="1"/>
+
+            <Button Text="Home"
+                    FontSize="13"
+                    TextColor="White"
+                    BackgroundColor="#070B1F"
+                    BorderRadius="15"
+                    Grid.Column="1" 
+                    Grid.Row="2" 
+                    Padding="25,10"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"></Button>
+            
+        </Grid>
+    </Grid>
+
+</ContentPage>
