@@ -18,7 +18,27 @@
             <Setter Property="FontSize" Value="{StaticResource tamanoFuenteGrande}"></Setter>
             <Setter Property="BackgroundColor" Value="{StaticResource colorFondo}"></Setter>
             <Setter Property="VerticalOptions" Value="{StaticResource VerticalStart}"></Setter>
-            <Setter Property="HorizontalOptions" Value="{StaticResource HorizontalEnd}"></Setter> 
+            <Setter Property="HorizontalOptions" Value="{StaticResource HorizontalEnd}"></Setter>
+            <Setter Property="TextColor" Value="{StaticResource colorTitulo}"></Setter>
+
     </Style>
-    
+    <Style TargetType="Button" x:Key="botonSecundario">
+
+        <Setter Property="FontSize" Value="{StaticResource tamanoFuentePequeño}"></Setter>
+        <Setter Property="BackgroundColor" Value="#151C46"></Setter>
+        <Setter Property="VerticalOptions" Value="Center"></Setter>
+        <Setter Property="HorizontalOptions" Value="Center"></Setter>
+        <Setter Property="BorderRadius" Value="15"></Setter>
+        <Setter Property="Padding" Value="10,5"></Setter>
+        <Setter Property="FontFamily" Value="Gothic"></Setter>
+        <Setter Property="TextColor" Value="{StaticResource colorTitulo}"></Setter>
+
+
+
+    </Style>
+
+  
+              
+                   
+
 </ResourceDictionary>
