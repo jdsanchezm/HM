@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4C37FD98-9813-4954-8715-7273F90C8E7C}</ProjectGuid>
+    <ProjectGuid>{EAAECD68-8C4B-4F16-94B9-D35D8EC7FDAF}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>PruebaXAML.Droid</RootNamespace>
-    <AssemblyName>PruebaXAML.Android</AssemblyName>
+    <RootNamespace>Recursos.Droid</RootNamespace>
+    <AssemblyName>Recursos.Android</AssemblyName>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -92,9 +92,9 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PruebaXAML\PruebaXAML.csproj">
-      <Project>{4D34D047-60FF-44BE-91E6-F1A0689D3484}</Project>
-      <Name>PruebaXAML</Name>
+    <ProjectReference Include="..\Recursos\Recursos.csproj">
+      <Project>{303C0754-672E-41BA-BAD4-1ADD64F4CDC7}</Project>
+      <Name>Recursos</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
