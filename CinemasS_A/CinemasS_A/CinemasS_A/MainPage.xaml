@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CinemasS_A"
+             x:Class="CinemasS_A.MainPage">
+
+    <Grid>
+        <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
+        <BoxView Color="#091146" Opacity="0.4"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" ></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout
+                 Grid.Column="1" Grid.Row="0">
+                <Label  Text="Administrador Cinemas S.A." 
+                    Margin="30"
+                    FontSize="30"
+                    TextColor="White"
+                    FontFamily="Calibri"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+         
+                <Button x:Name="bmenu" Text="Menú" Style="{StaticResource botonPrincipal}" Grid.Row="2" Grid.Column="1"></Button>
+            
+            
+
+
+        </Grid>
+    </Grid>
+
+</ContentPage>
