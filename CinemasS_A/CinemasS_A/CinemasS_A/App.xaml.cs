@@ -7,11 +7,21 @@ namespace CinemasS_A
 {
     public partial class App : Application
     {
+        public NavigationPage Page { get; }
+
         public App()
         {
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+            Page = new NavigationPage(new CrearTarjeta());
+            Page = new NavigationPage(new RecargarTarjeta());
+            Page = new NavigationPage(new CrearReserva());
+            Page = new NavigationPage(new EliminarReserva());
+            Page = new NavigationPage(new PagarReservaEnEfectivo());
+            Page = new NavigationPage(new PagarReservaConTarjeta());
+            Page = new NavigationPage(new VisualizarSillas());
+            Page = new NavigationPage(new VisualizarDineroCaja());
         }
 
         protected override void OnStart()
