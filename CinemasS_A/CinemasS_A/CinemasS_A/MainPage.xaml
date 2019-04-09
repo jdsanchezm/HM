@@ -7,7 +7,9 @@
     <Grid>
         <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
         <BoxView Color="#091146" Opacity="0.4"/>
+        
         <Grid>
+            
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="30"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>

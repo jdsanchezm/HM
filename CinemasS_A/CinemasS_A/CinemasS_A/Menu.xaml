@@ -6,14 +6,15 @@
         <Grid>
             <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
             <BoxView Color="#0B1761" Opacity="0.4"/>
+            
             <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="30"></RowDefinition>
             </Grid.RowDefinitions>
-            
-        
+
+                
               
                 <StackLayout Grid.Row="1">
                     <Button x:Name="BCrearTarjeta" Text="Crear nueva Tarjeta" Style="{StaticResource botonSecundario}"></Button>
@@ -25,7 +26,7 @@
                     <Button x:Name="BVisualizarSillas" Text="Visualizar sillas del cine" Style="{StaticResource botonSecundario}"></Button>
                     <Button x:Name="BVisualizarDinero" Text="Visualizar dinero en caja" Style="{StaticResource botonSecundario}"></Button>
                 </StackLayout>
-
+                
 
             </Grid>
         </Grid>
