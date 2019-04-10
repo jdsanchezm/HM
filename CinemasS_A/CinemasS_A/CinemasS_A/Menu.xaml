@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CinemasS_A.Menu">
     <ContentPage.Content>
+        <ScrollView>
         <Grid>
             <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
             <BoxView Color="#0B1761" Opacity="0.4"/>
@@ -30,5 +31,6 @@
 
             </Grid>
         </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
