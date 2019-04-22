@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>Modelo VC</title>
+    <script src="Scripts/scrolling-nav.js"></script>
+    <link href="Content/Site.css"/>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <!-- Recorre los elementos del array `elements`.  -->
+            <li v-for="ele in elements">
+                {{ ele }}
+            </li>
+        </ul>
+
+        <ul>
+            <!-- Recorre el array `users`. -->
+            <li v-for="user in users">
+                <!-- {{ user.name }} muestra la propiedad `name` del objeto `user` -->
+                <b>{{ user.name }}</b>&nbsp;
+                <!-- v-if: Muestra el contenido de la etiqueta si la expresión `user.gender=="m"` es verdadera. -->
+                <span v-if="user.gender=='m'">Hombre</span>
+                <!-- Si la expresión anterior es Falsa, muestra el contenido de esta etiqueta. -->
+                <span v-else>Mujer</span>
+
+            </li>
+        </ul>
+    </div>
+</body>
+
