@@ -17,7 +17,7 @@
 
 
                 <StackLayout Grid.Row="1">
-                 
+                    <Label Text="Dinero en caja" Style="{StaticResource Titulo}"/>
                 </StackLayout>
 
 

@@ -17,7 +17,7 @@
 
 
                 <StackLayout Grid.Row="1">
-                    
+                    <Label Text="Eliminar Reserva" Style="{StaticResource Titulo}"/>
                 </StackLayout>
 
 

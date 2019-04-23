@@ -39,7 +39,23 @@
 
 
     </Style>
+    <Style TargetType="Label" x:Key="Titulo">
+        <Setter  Property="VerticalOptions" Value="StartAndExpand"  ></Setter>
+        <Setter Property="Margin" Value="10 10"></Setter>
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand"></Setter>
+        <Setter Property="FontFamily" Value="Roboto Thin"></Setter>
+        <Setter Property="FontSize" Value="30"></Setter>
+        <Setter Property="TextColor" Value="White"></Setter>
+        
+    </Style>
+    <Style TargetType="Label" x:Key="Contenido">
+        <Setter  Property="VerticalOptions" Value="CenterAndExpand"  ></Setter>
+        <Setter Property="Margin" Value="3 10"></Setter>
+        <Setter Property="HorizontalOptions" Value="End"></Setter>
+        <Setter Property="FontFamily" Value="Roboto Thin"></Setter>
+        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="TextColor" Value="Gray"></Setter>
 
-
+    </Style>
 
 </ResourceDictionary>

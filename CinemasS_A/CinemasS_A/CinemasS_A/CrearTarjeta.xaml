@@ -17,7 +17,10 @@
 
 
                 <StackLayout Grid.Row="1">
-                  
+                    <BoxView Color="#777A8A" Opacity="0.7"/>
+                    <Label Text="Crear Tarjeta" Style="{StaticResource Titulo}"/>
+                    <Label Text="Documento:" Style="{StaticResource Contenido}"></Label>
+                    <Entry  Placeholder="Documento del propietario" HorizontalOptions="FillAndExpand" VerticalOptions="Center"></Entry>
                 </StackLayout>
 
 

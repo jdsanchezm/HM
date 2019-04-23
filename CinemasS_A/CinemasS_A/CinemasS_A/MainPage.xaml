@@ -24,12 +24,8 @@
             <StackLayout
                  Grid.Column="1" Grid.Row="0">
                 <Label  Text="Administrador Cinemas S.A." 
-                    Margin="30"
-                    FontSize="30"
-                    TextColor="White"
-                    FontFamily="Calibri"                      
-                    HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="CenterAndExpand"/>
+                 Style="{StaticResource Titulo}"
+                   />
             </StackLayout>
          
                 <Button x:Name="bmenu" Text="Menú" Style="{StaticResource botonPrincipal}" Grid.Row="2" Grid.Column="1"></Button>
