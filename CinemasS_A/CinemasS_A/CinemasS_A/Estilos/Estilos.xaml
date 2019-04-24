@@ -19,7 +19,7 @@
         <Setter Property="BackgroundColor" Value="{StaticResource colorFondo}"></Setter>
         <Setter Property="VerticalOptions" Value="{StaticResource VerticalStart}"></Setter>
         <Setter Property="HorizontalOptions" Value="CenterAndExpand"></Setter>
-        <Setter Property="BorderRadius" Value="10"></Setter>
+        <Setter Property="BorderRadius" Value="7"></Setter>
         <Setter Property="Margin" Value="30"></Setter>
         <Setter Property="TextColor" Value="{StaticResource colorTitulo}"></Setter>
 
@@ -30,7 +30,7 @@
         <Setter Property="BackgroundColor" Value="#090D23"></Setter>
         <Setter Property="VerticalOptions" Value="Center"></Setter>
         <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
-        <Setter Property="BorderRadius" Value="10"></Setter>
+        <Setter Property="BorderRadius" Value="7"></Setter>
         <Setter Property="Padding" Value="15"></Setter>
         <Setter Property="Margin" Value="2"></Setter>
         <Setter Property="FontFamily" Value="Gothic"></Setter>
@@ -41,7 +41,7 @@
     </Style>
     <Style TargetType="Label" x:Key="Titulo">
         <Setter  Property="VerticalOptions" Value="StartAndExpand"  ></Setter>
-        <Setter Property="Margin" Value="10 10"></Setter>
+        <Setter Property="Margin" Value="20,20"></Setter>
         <Setter Property="HorizontalOptions" Value="CenterAndExpand"></Setter>
         <Setter Property="FontFamily" Value="Roboto Thin"></Setter>
         <Setter Property="FontSize" Value="30"></Setter>
@@ -50,11 +50,11 @@
     </Style>
     <Style TargetType="Label" x:Key="Contenido">
         <Setter  Property="VerticalOptions" Value="CenterAndExpand"  ></Setter>
-        <Setter Property="Margin" Value="3 10"></Setter>
+        
         <Setter Property="HorizontalOptions" Value="End"></Setter>
         <Setter Property="FontFamily" Value="Roboto Thin"></Setter>
-        <Setter Property="FontSize" Value="20"></Setter>
-        <Setter Property="TextColor" Value="Gray"></Setter>
+        <Setter Property="FontSize" Value="25"></Setter>
+        <Setter Property="TextColor" Value="DarkGray"></Setter>
 
     </Style>
 

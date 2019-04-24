@@ -3,28 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CinemasS_A.CrearTarjeta">
     <ContentPage.Content>
+      
         <Grid>
             <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
-            <BoxView Color="#0B1761" Opacity="0.4"/>
+            <BoxView Color="#091146" Opacity="0.7"/>
 
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="30"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="*" ></RowDefinition>
                     <RowDefinition Height="30"></RowDefinition>
                 </Grid.RowDefinitions>
 
-
-
+                <Label Text="Crear Tarjeta"
+                       Style="{StaticResource Titulo}"
+                       Grid.Row="0"/>
+                
+                <BoxView Color="#777A8A"
+                         Opacity="0.7" Grid.Row="1"/>
                 <StackLayout Grid.Row="1">
-                    <BoxView Color="#777A8A" Opacity="0.7"/>
-                    <Label Text="Crear Tarjeta" Style="{StaticResource Titulo}"/>
+                  
+                
                     <Label Text="Documento:" Style="{StaticResource Contenido}"></Label>
-                    <Entry  Placeholder="Documento del propietario" HorizontalOptions="FillAndExpand" VerticalOptions="Center"></Entry>
+                    <Entry  Placeholder="Documento del propietario" 
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            BackgroundColor="White"
+                            Margin="5,5"
+                            
+                            ></Entry>
                 </StackLayout>
 
 
             </Grid>
         </Grid>
+     
     </ContentPage.Content>
 </ContentPage>
