@@ -1,0 +1,58 @@
+﻿@model CinemaMVC.Models.Tarjeta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tarjeta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.docPropietario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.docPropietario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Propietario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Propietario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.recarga)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.recarga)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.saldo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.saldo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.saldoInicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.saldoInicial)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idTarjeta }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

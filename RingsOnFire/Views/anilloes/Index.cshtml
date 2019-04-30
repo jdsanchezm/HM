@@ -1,0 +1,51 @@
+﻿@model IEnumerable<RingsOnFire.Models.anillo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.material)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.circunferencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.peso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precio)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.material)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.circunferencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.peso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idAnillo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idAnillo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idAnillo })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RingsOnFireModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="anillo">
+          <Key>
+            <PropertyRef Name="idAnillo" />
+          </Key>
+          <Property Name="idAnillo" Type="int" Nullable="false" />
+          <Property Name="material" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="circunferencia" Type="int" Nullable="false" />
+          <Property Name="peso" Type="int" />
+          <Property Name="precio" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cliente">
+          <Key>
+            <PropertyRef Name="idCliente" />
+          </Key>
+          <Property Name="idCliente" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="celular" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="encargo">
+          <Key>
+            <PropertyRef Name="idEncargo" />
+          </Key>
+          <Property Name="idEncargo" Type="int" Nullable="false" />
+          <Property Name="fechaEncargo" Type="date" Nullable="false" />
+          <Property Name="fechaEntrega" Type="date" Nullable="false" />
+          <Property Name="monto" Type="int" Nullable="false" />
+          <Property Name="fkCliente" Type="int" Nullable="false" />
+          <Property Name="fkAnillo" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_encargo_anillo">
+          <End Role="anillo" Type="Self.anillo" Multiplicity="1" />
+          <End Role="encargo" Type="Self.encargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="anillo">
+              <PropertyRef Name="idAnillo" />
+            </Principal>
+            <Dependent Role="encargo">
+              <PropertyRef Name="fkAnillo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_encargo_cliente">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+          <End Role="encargo" Type="Self.encargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idCliente" />
+            </Principal>
+            <Dependent Role="encargo">
+              <PropertyRef Name="fkCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="RingsOnFireModelStoreContainer">
+          <EntitySet Name="anillo" EntityType="Self.anillo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cliente" EntityType="Self.cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="encargo" EntityType="Self.encargo" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_encargo_anillo" Association="Self.FK_encargo_anillo">
+            <End Role="anillo" EntitySet="anillo" />
+            <End Role="encargo" EntitySet="encargo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_encargo_cliente" Association="Self.FK_encargo_cliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="encargo" EntitySet="encargo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RingsOnFireModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="anillo">
+          <Key>
+            <PropertyRef Name="idAnillo" />
+          </Key>
+          <Property Name="idAnillo" Type="Int32" Nullable="false" />
+          <Property Name="material" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="circunferencia" Type="Int32" Nullable="false" />
+          <Property Name="peso" Type="Int32" />
+          <Property Name="precio" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="encargo" Relationship="Self.FK_encargo_anillo" FromRole="anillo" ToRole="encargo" />
+        </EntityType>
+        <EntityType Name="cliente">
+          <Key>
+            <PropertyRef Name="idCliente" />
+          </Key>
+          <Property Name="idCliente" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="celular" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="encargo" Relationship="Self.FK_encargo_cliente" FromRole="cliente" ToRole="encargo" />
+        </EntityType>
+        <EntityType Name="encargo">
+          <Key>
+            <PropertyRef Name="idEncargo" />
+          </Key>
+          <Property Name="idEncargo" Type="Int32" Nullable="false" />
+          <Property Name="fechaEncargo" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fechaEntrega" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="monto" Type="Int32" Nullable="false" />
+          <Property Name="fkCliente" Type="Int32" Nullable="false" />
+          <Property Name="fkAnillo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="anillo" Relationship="Self.FK_encargo_anillo" FromRole="encargo" ToRole="anillo" />
+          <NavigationProperty Name="cliente" Relationship="Self.FK_encargo_cliente" FromRole="encargo" ToRole="cliente" />
+        </EntityType>
+        <Association Name="FK_encargo_anillo">
+          <End Role="anillo" Type="Self.anillo" Multiplicity="1" />
+          <End Role="encargo" Type="Self.encargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="anillo">
+              <PropertyRef Name="idAnillo" />
+            </Principal>
+            <Dependent Role="encargo">
+              <PropertyRef Name="fkAnillo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_encargo_cliente">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
+          <End Role="encargo" Type="Self.encargo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="idCliente" />
+            </Principal>
+            <Dependent Role="encargo">
+              <PropertyRef Name="fkCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="RingsOnFireEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="anillo" EntityType="Self.anillo" />
+          <EntitySet Name="cliente" EntityType="Self.cliente" />
+          <EntitySet Name="encargo" EntityType="Self.encargo" />
+          <AssociationSet Name="FK_encargo_anillo" Association="Self.FK_encargo_anillo">
+            <End Role="anillo" EntitySet="anillo" />
+            <End Role="encargo" EntitySet="encargo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_encargo_cliente" Association="Self.FK_encargo_cliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="encargo" EntitySet="encargo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RingsOnFireModelStoreContainer" CdmEntityContainer="RingsOnFireEntities">
+          <EntitySetMapping Name="anillo">
+            <EntityTypeMapping TypeName="RingsOnFireModel.anillo">
+              <MappingFragment StoreEntitySet="anillo">
+                <ScalarProperty Name="idAnillo" ColumnName="idAnillo" />
+                <ScalarProperty Name="material" ColumnName="material" />
+                <ScalarProperty Name="circunferencia" ColumnName="circunferencia" />
+                <ScalarProperty Name="peso" ColumnName="peso" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cliente">
+            <EntityTypeMapping TypeName="RingsOnFireModel.cliente">
+              <MappingFragment StoreEntitySet="cliente">
+                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="celular" ColumnName="celular" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="encargo">
+            <EntityTypeMapping TypeName="RingsOnFireModel.encargo">
+              <MappingFragment StoreEntitySet="encargo">
+                <ScalarProperty Name="idEncargo" ColumnName="idEncargo" />
+                <ScalarProperty Name="fechaEncargo" ColumnName="fechaEncargo" />
+                <ScalarProperty Name="fechaEntrega" ColumnName="fechaEntrega" />
+                <ScalarProperty Name="monto" ColumnName="monto" />
+                <ScalarProperty Name="fkCliente" ColumnName="fkCliente" />
+                <ScalarProperty Name="fkAnillo" ColumnName="fkAnillo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

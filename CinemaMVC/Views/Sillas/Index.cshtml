@@ -1,0 +1,69 @@
+﻿@model IEnumerable<CinemaMVC.Models.Silla>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fila)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.noSilla)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reserva.estadoPago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sala.noSala)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fila)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.noSilla)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.reserva.estadoPago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sala.noSala)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idSilla }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idSilla }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idSilla })
+        </td>
+    </tr>
+}
+
+</table>

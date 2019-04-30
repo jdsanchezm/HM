@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CinemaMVC.Models.Tarjeta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.docPropietario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propietario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.recarga)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.saldo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.saldoInicial)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.docPropietario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Propietario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.recarga)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.saldo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.saldoInicial)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idTarjeta }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idTarjeta }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idTarjeta })
+        </td>
+    </tr>
+}
+
+</table>

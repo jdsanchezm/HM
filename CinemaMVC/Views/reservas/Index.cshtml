@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CinemaMVC.Models.reserva>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.docSolicitante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estadoPago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.metodoDePago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tarjeta.Propietario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.docSolicitante)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estadoPago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.metodoDePago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tarjeta.Propietario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idReserva }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idReserva }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idReserva })
+        </td>
+    </tr>
+}
+
+</table>
