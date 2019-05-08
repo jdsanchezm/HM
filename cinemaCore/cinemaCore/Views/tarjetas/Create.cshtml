@@ -1,0 +1,48 @@
+﻿@model cinemaCore.Models.tarjeta
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>tarjeta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="docPropietario" class="control-label"></label>
+                <input asp-for="docPropietario" class="form-control" />
+                <span asp-validation-for="docPropietario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nombrePropietario" class="control-label"></label>
+                <input asp-for="nombrePropietario" class="form-control" />
+                <span asp-validation-for="nombrePropietario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="saldo" class="control-label"></label>
+                <input asp-for="saldo" class="form-control" />
+                <span asp-validation-for="saldo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="recarga" class="control-label"></label>
+                <input asp-for="recarga" class="form-control" />
+                <span asp-validation-for="recarga" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

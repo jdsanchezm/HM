@@ -1,0 +1,48 @@
+﻿@model cinemaCore.Models.reserva
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>reserva</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.docSolicitante)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.docSolicitante)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.estadoPago)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.estadoPago)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.metodoPago)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.metodoPago)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidadSillas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.cantidadSillas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fkIdTarjeta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fkIdTarjeta)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.idReserva">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

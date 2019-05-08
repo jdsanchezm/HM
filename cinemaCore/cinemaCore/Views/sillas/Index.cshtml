@@ -1,0 +1,53 @@
+﻿@model IEnumerable<cinemaCore.Models.silla>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.fila)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.noSilla)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.tipo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.estado)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fila)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.noSilla)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.estado)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.idSilla">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.idSilla">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.idSilla">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

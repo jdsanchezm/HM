@@ -1,0 +1,53 @@
+﻿@model IEnumerable<cinemaCore.Models.tarjeta>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.docPropietario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.nombrePropietario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.saldo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.recarga)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.docPropietario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombrePropietario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.saldo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.recarga)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.idTarjeta">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.idTarjeta">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.idTarjeta">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
