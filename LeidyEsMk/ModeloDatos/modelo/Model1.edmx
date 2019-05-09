@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="reserva">
+          <Key>
+            <PropertyRef Name="idReserva" />
+          </Key>
+          <Property Name="idReserva" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="docSolicitante" Type="int" Nullable="false" />
+          <Property Name="precio" Type="int" Nullable="false" />
+          <Property Name="estadoPago" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="metodoDePago" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="fkIdTarjeta" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sala">
+          <Key>
+            <PropertyRef Name="noSala" />
+          </Key>
+          <Property Name="noSala" Type="int" Nullable="false" />
+          <Property Name="ingreso" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Silla">
+          <Key>
+            <PropertyRef Name="idSilla" />
+          </Key>
+          <Property Name="fila" Type="int" Nullable="false" />
+          <Property Name="noSilla" Type="int" Nullable="false" />
+          <Property Name="tipo" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="estado" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="cantidad" Type="int" Nullable="false" />
+          <Property Name="idSilla" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="fkNoSala" Type="int" Nullable="false" />
+          <Property Name="fkIdReserva" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tarjeta">
+          <Key>
+            <PropertyRef Name="idTarjeta" />
+          </Key>
+          <Property Name="idTarjeta" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="docPropietario" Type="int" Nullable="false" />
+          <Property Name="Propietario" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="recarga" Type="int" Nullable="false" />
+          <Property Name="saldo" Type="int" Nullable="false" />
+          <Property Name="saldoInicial" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_reserva_Tarjeta">
+          <End Role="Tarjeta" Type="Self.Tarjeta" Multiplicity="1" />
+          <End Role="reserva" Type="Self.reserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tarjeta">
+              <PropertyRef Name="idTarjeta" />
+            </Principal>
+            <Dependent Role="reserva">
+              <PropertyRef Name="fkIdTarjeta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Silla_reserva">
+          <End Role="reserva" Type="Self.reserva" Multiplicity="1" />
+          <End Role="Silla" Type="Self.Silla" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="reserva">
+              <PropertyRef Name="idReserva" />
+            </Principal>
+            <Dependent Role="Silla">
+              <PropertyRef Name="fkIdReserva" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Silla_Sala">
+          <End Role="Sala" Type="Self.Sala" Multiplicity="1" />
+          <End Role="Silla" Type="Self.Silla" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sala">
+              <PropertyRef Name="noSala" />
+            </Principal>
+            <Dependent Role="Silla">
+              <PropertyRef Name="fkNoSala" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CineModelStoreContainer">
+          <EntitySet Name="reserva" EntityType="Self.reserva" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sala" EntityType="Self.Sala" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Silla" EntityType="Self.Silla" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tarjeta" EntityType="Self.Tarjeta" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_reserva_Tarjeta" Association="Self.FK_reserva_Tarjeta">
+            <End Role="Tarjeta" EntitySet="Tarjeta" />
+            <End Role="reserva" EntitySet="reserva" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Silla_reserva" Association="Self.FK_Silla_reserva">
+            <End Role="reserva" EntitySet="reserva" />
+            <End Role="Silla" EntitySet="Silla" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Silla_Sala" Association="Self.FK_Silla_Sala">
+            <End Role="Sala" EntitySet="Sala" />
+            <End Role="Silla" EntitySet="Silla" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CineModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="reserva">
+          <Key>
+            <PropertyRef Name="idReserva" />
+          </Key>
+          <Property Name="idReserva" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="docSolicitante" Type="Int32" Nullable="false" />
+          <Property Name="precio" Type="Int32" Nullable="false" />
+          <Property Name="estadoPago" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="metodoDePago" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="fkIdTarjeta" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Tarjeta" Relationship="Self.FK_reserva_Tarjeta" FromRole="reserva" ToRole="Tarjeta" />
+          <NavigationProperty Name="Silla" Relationship="Self.FK_Silla_reserva" FromRole="reserva" ToRole="Silla" />
+        </EntityType>
+        <EntityType Name="Sala">
+          <Key>
+            <PropertyRef Name="noSala" />
+          </Key>
+          <Property Name="noSala" Type="Int32" Nullable="false" />
+          <Property Name="ingreso" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Silla" Relationship="Self.FK_Silla_Sala" FromRole="Sala" ToRole="Silla" />
+        </EntityType>
+        <EntityType Name="Silla">
+          <Key>
+            <PropertyRef Name="idSilla" />
+          </Key>
+          <Property Name="fila" Type="Int32" Nullable="false" />
+          <Property Name="noSilla" Type="Int32" Nullable="false" />
+          <Property Name="tipo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="estado" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="cantidad" Type="Int32" Nullable="false" />
+          <Property Name="idSilla" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="fkNoSala" Type="Int32" Nullable="false" />
+          <Property Name="fkIdReserva" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="reserva" Relationship="Self.FK_Silla_reserva" FromRole="Silla" ToRole="reserva" />
+          <NavigationProperty Name="Sala" Relationship="Self.FK_Silla_Sala" FromRole="Silla" ToRole="Sala" />
+        </EntityType>
+        <EntityType Name="Tarjeta">
+          <Key>
+            <PropertyRef Name="idTarjeta" />
+          </Key>
+          <Property Name="idTarjeta" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="docPropietario" Type="Int32" Nullable="false" />
+          <Property Name="Propietario" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="recarga" Type="Int32" Nullable="false" />
+          <Property Name="saldo" Type="Int32" Nullable="false" />
+          <Property Name="saldoInicial" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="reserva" Relationship="Self.FK_reserva_Tarjeta" FromRole="Tarjeta" ToRole="reserva" />
+        </EntityType>
+        <Association Name="FK_reserva_Tarjeta">
+          <End Role="Tarjeta" Type="Self.Tarjeta" Multiplicity="1" />
+          <End Role="reserva" Type="Self.reserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tarjeta">
+              <PropertyRef Name="idTarjeta" />
+            </Principal>
+            <Dependent Role="reserva">
+              <PropertyRef Name="fkIdTarjeta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Silla_reserva">
+          <End Role="reserva" Type="Self.reserva" Multiplicity="1" />
+          <End Role="Silla" Type="Self.Silla" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="reserva">
+              <PropertyRef Name="idReserva" />
+            </Principal>
+            <Dependent Role="Silla">
+              <PropertyRef Name="fkIdReserva" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Silla_Sala">
+          <End Role="Sala" Type="Self.Sala" Multiplicity="1" />
+          <End Role="Silla" Type="Self.Silla" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sala">
+              <PropertyRef Name="noSala" />
+            </Principal>
+            <Dependent Role="Silla">
+              <PropertyRef Name="fkNoSala" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CineEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="reserva" EntityType="Self.reserva" />
+          <EntitySet Name="Sala" EntityType="Self.Sala" />
+          <EntitySet Name="Silla" EntityType="Self.Silla" />
+          <EntitySet Name="Tarjeta" EntityType="Self.Tarjeta" />
+          <AssociationSet Name="FK_reserva_Tarjeta" Association="Self.FK_reserva_Tarjeta">
+            <End Role="Tarjeta" EntitySet="Tarjeta" />
+            <End Role="reserva" EntitySet="reserva" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Silla_reserva" Association="Self.FK_Silla_reserva">
+            <End Role="reserva" EntitySet="reserva" />
+            <End Role="Silla" EntitySet="Silla" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Silla_Sala" Association="Self.FK_Silla_Sala">
+            <End Role="Sala" EntitySet="Sala" />
+            <End Role="Silla" EntitySet="Silla" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CineModelStoreContainer" CdmEntityContainer="CineEntities">
+          <EntitySetMapping Name="reserva">
+            <EntityTypeMapping TypeName="CineModel.reserva">
+              <MappingFragment StoreEntitySet="reserva">
+                <ScalarProperty Name="idReserva" ColumnName="idReserva" />
+                <ScalarProperty Name="docSolicitante" ColumnName="docSolicitante" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="estadoPago" ColumnName="estadoPago" />
+                <ScalarProperty Name="metodoDePago" ColumnName="metodoDePago" />
+                <ScalarProperty Name="fkIdTarjeta" ColumnName="fkIdTarjeta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sala">
+            <EntityTypeMapping TypeName="CineModel.Sala">
+              <MappingFragment StoreEntitySet="Sala">
+                <ScalarProperty Name="noSala" ColumnName="noSala" />
+                <ScalarProperty Name="ingreso" ColumnName="ingreso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Silla">
+            <EntityTypeMapping TypeName="CineModel.Silla">
+              <MappingFragment StoreEntitySet="Silla">
+                <ScalarProperty Name="fila" ColumnName="fila" />
+                <ScalarProperty Name="noSilla" ColumnName="noSilla" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="idSilla" ColumnName="idSilla" />
+                <ScalarProperty Name="fkNoSala" ColumnName="fkNoSala" />
+                <ScalarProperty Name="fkIdReserva" ColumnName="fkIdReserva" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tarjeta">
+            <EntityTypeMapping TypeName="CineModel.Tarjeta">
+              <MappingFragment StoreEntitySet="Tarjeta">
+                <ScalarProperty Name="idTarjeta" ColumnName="idTarjeta" />
+                <ScalarProperty Name="docPropietario" ColumnName="docPropietario" />
+                <ScalarProperty Name="Propietario" ColumnName="Propietario" />
+                <ScalarProperty Name="recarga" ColumnName="recarga" />
+                <ScalarProperty Name="saldo" ColumnName="saldo" />
+                <ScalarProperty Name="saldoInicial" ColumnName="saldoInicial" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
