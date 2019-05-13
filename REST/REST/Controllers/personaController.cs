@@ -10,49 +10,47 @@ namespace REST.Controllers
 {
     public class personaController : ApiController
     {
-        // GET: api/persona
+        // GET: api/persona(Es decir, todas las personas registradas)
+        [HttpGet]
         public IEnumerable<personainfo> Get()
         {
             var ListaInfoPersona = new List<personainfo>();
         
             {
-               var personainfo = new personainfo
-                {
+                var personainfo = new personainfo
+                { idPersona = 1,
                     NoDocumento = 1000557888,
-                    nombre = $"Jorge Peña",
+                    nombre = "Jorge Peña",
                     edad = 40,
-                    ocupacion = $"Abogado",
+                    ocupacion = "Abogado",
+                    
                 };
                 ListaInfoPersona.Add(personainfo);
             }
             return ListaInfoPersona;
         }
-
-        // GET: api/persona/5
+        [HttpGet]
+        // GET: api/persona/5(Buscar una persona en especifico)
         public personainfo Get(int id)
         {
-            return  new personainfo
-            {
-                NoDocumento = id,
-                nombre = $"nombre",
-                edad = edad,
-                ocupacion = $"ocupacion",
-            };
-            
+            var libro =  BD.personainfo.FirstOrDefault(x=> x.idLibro==id);
+
+          
+            return libro;
 
         }
 
-        // POST: api/persona
+        // POST: api/persona(Insertar valores)
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT: api/persona/5
+        // PUT: api/persona/5(Actualizar datos)
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE: api/persona/5
+        // DELETE: api/persona/5(Borrar una persona)
         public void Delete(int id)
         {
         }
