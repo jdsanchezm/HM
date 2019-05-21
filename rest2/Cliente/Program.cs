@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-//using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace Cliente
 {
@@ -15,10 +16,11 @@ namespace Cliente
             HttpClient cliente = new HttpClient();
             cliente.BaseAddress = new Uri("http://localhost:42845/");
             var request = cliente.GetAsync("api/libro").Result;
-            //string url = "localhost:42845/api/libro";
-            //var json = new WebClient().DownloadString(url);
-            // dynamic m = JsonConvert.DeserializeObject(json);
-            //  Console.WriteLine(json);
+            var resultRequest = request.Content.ReadAsStringAsync.;
+            var json = new WebClient().DownloadString(request);
+             dynamic m = JsonConvert.DeserializeObject(json);
+             Console.WriteLine(json);
+            Console.ReadLine();
         }
     }
 }

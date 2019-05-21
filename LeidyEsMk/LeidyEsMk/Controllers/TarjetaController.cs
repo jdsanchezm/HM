@@ -4,12 +4,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using ModeloDatos.modelo;
 
 namespace LeidyEsMk.Controllers
 {
     public class TarjetaController : ApiController
     {
-        cineEntities BD = new cineEntities();
+        CineEntities BD = new CineEntities();
         // GET: api/Tarjeta
         public IEnumerable<string> Get()
         {

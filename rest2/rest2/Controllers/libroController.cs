@@ -36,7 +36,7 @@ namespace rest2.Controllers
             Libro bienymal = new Libro
             {
                 idLibro = 3,
-                titulo = "Entre el bien y el mal",
+                titulo = "Mas allá del bien y el mal",
                 autor = "Friedrich Nietzsche",
             };
             this.ListaLibros.Add(bienymal);
