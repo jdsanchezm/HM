@@ -4,11 +4,17 @@
              xmlns:local="clr-namespace:InterfazGrafica"
              x:Class="InterfazGrafica.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+   <Grid>
+       <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+       </Grid.ColumnDefinitions>
+       <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+       </Grid.RowDefinitions></Grid>
 
 </ContentPage>
