@@ -18,10 +18,12 @@ namespace CinemasS_A
             Page = new NavigationPage(new RecargarTarjeta());
             Page = new NavigationPage(new CrearReserva());
             Page = new NavigationPage(new EliminarReserva());
+            Page = new NavigationPage(new PagarReserva());
             Page = new NavigationPage(new PagarReservaEnEfectivo());
             Page = new NavigationPage(new PagarReservaConTarjeta());
             Page = new NavigationPage(new VisualizarSillas());
             Page = new NavigationPage(new VisualizarDineroCaja());
+            Page = new NavigationPage(new Registro());
         }
 
         protected override void OnStart()

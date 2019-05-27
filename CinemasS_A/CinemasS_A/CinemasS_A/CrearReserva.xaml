@@ -25,21 +25,11 @@
 
 
                     <Label Text="Cédula:" Style="{StaticResource Contenido}"></Label>
-                    <Entry  Placeholder="Cédula" 
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="CenterAndExpand"
-                            BackgroundColor="White"
-                            Margin="5,5"
-                            
-                            ></Entry>                   
+                        <Entry   Placeholder="Cedula"   Style="{StaticResource EntryStyle}"  ></Entry>                   
                     
                     <Label Text="Sillas:" Style="{StaticResource Contenido}"></Label>
-                    <Entry  Placeholder="Sillas" 
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="CenterAndExpand"
-                            BackgroundColor="White"
-                            Margin="5,5"                            
-                            ></Entry>
+                        <Entry    Placeholder="Sillas"  Style="{StaticResource EntryStyle}" ></Entry>
+                    
                     <Label Text="Estado de pago:" Style="{StaticResource Contenido}"></Label>
                     <Picker x:Name="PickerEstadoReserva"
                             BackgroundColor="Black"

@@ -13,11 +13,17 @@ namespace CinemasS_A
         {
             InitializeComponent();
             bmenu.Clicked += bmenu_Clicked;
+            bregistro.Clicked += bregistro_Clicked;
+            
         }
 
         private void bmenu_Clicked(object sender, EventArgs e)
         {
             ((NavigationPage)this.Parent).PushAsync(new Menu());
+        }
+        private void bregistro_Clicked(object sender, EventArgs e)
+        {
+            ((NavigationPage)this.Parent).PushAsync(new Registro());
         }
     }
 }

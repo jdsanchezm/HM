@@ -19,11 +19,15 @@
          
                 <Button x:Name="bmenu"
                         Margin="30,30"
-                        Text="Menú"
-                        Style="{StaticResource botonPrincipal}" 
-                       
-                        WidthRequest="500"></Button>
-                </StackLayout>
+                        Text="Iniciar"
+                        Style="{StaticResource botonPrincipal}"                       
+                        ></Button>
+                <Button x:Name="bregistro"
+                        Margin="30,30"
+                        Text="Registrarse"
+                        Style="{StaticResource botonPrincipal}"                       
+                        ></Button>
+            </StackLayout>
 
 
 

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CinemasS_A.PagarReserva">
+    <ContentPage.Content>
+
+
+        <ScrollView>
+            <Grid>
+                <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
+                <BoxView Color="#0B1761" Opacity="0.4"/>
+
+
+                <StackLayout>
+                    <Button x:Name="BPagarReservaEnEfectivo" VerticalOptions="Center" Text="Pagar reserva en efectivo" Style="{StaticResource botonSecundario}"></Button>
+                    <Button x:Name="BPagarReservaConTarjeta" VerticalOptions="Center" Text="Pagar reserva con tarjeta Cinemas" Style="{StaticResource botonSecundario}"></Button>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -19,8 +19,7 @@ namespace CinemasS_A
             BRecargarTarjeta.Clicked += BRecargarTarjeta_Clicked;
             BCrearReserva.Clicked += BCrearReserva_Clicked;
             BEliminarReserva.Clicked += BEliminarReserva_Clicked;
-            BPagarReservaEnEfectivo.Clicked += BPagarReservaEnEfectivo_Clicked;
-            BPagarReservaConTarjeta.Clicked += BPagarReservaConTarjeta_Clicked;
+            BPagarReserva.Clicked += BPagarReserva_Clicked;
             BVisualizarSillas.Clicked += BVisualizarSillas_Clicked;
             BVisualizarDinero.Clicked += BVisualizarDinero_Clicked;
         }
@@ -35,15 +34,12 @@ namespace CinemasS_A
             ((NavigationPage)this.Parent).PushAsync(new VisualizarSillas());
         }
 
-        private void BPagarReservaConTarjeta_Clicked(object sender, EventArgs e)
+        private void BPagarReserva_Clicked(object sender, EventArgs e)
         {
-            ((NavigationPage)this.Parent).PushAsync(new PagarReservaConTarjeta());
+            ((NavigationPage)this.Parent).PushAsync(new PagarReserva());
         }
 
-        private void BPagarReservaEnEfectivo_Clicked(object sender, EventArgs e)
-        {
-           ((NavigationPage)this.Parent).PushAsync(new PagarReservaEnEfectivo());
-        }
+      
 
         private void BEliminarReserva_Clicked(object sender, EventArgs e)
         {

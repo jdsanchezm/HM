@@ -18,7 +18,7 @@
         <Setter Property="FontSize" Value="{StaticResource tamanoFuentePequeño}"></Setter>
         <Setter Property="BackgroundColor" Value="{StaticResource colorFondo}"></Setter>
         <Setter Property="VerticalOptions" Value="{StaticResource VerticalStart}"></Setter>
-        <Setter Property="HorizontalOptions" Value="CenterAndExpand"></Setter>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
         <Setter Property="BorderRadius" Value="7"></Setter>
         <Setter Property="Margin" Value="30"></Setter>
         <Setter Property="TextColor" Value="{StaticResource colorTitulo}"></Setter>
@@ -53,9 +53,17 @@
         
         <Setter Property="HorizontalOptions" Value="End"></Setter>
         <Setter Property="FontFamily" Value="Roboto Thin"></Setter>
-        <Setter Property="FontSize" Value="25"></Setter>
+        <Setter Property="FontSize" Value="Small"></Setter>
         <Setter Property="TextColor" Value="DarkGray"></Setter>
 
     </Style>
+    <Style TargetType="Entry" x:Key="EntryStyle">
+   
+        <Setter  Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+        <Setter  Property="VerticalOptions" Value="CenterAndExpand"></Setter>
+        <Setter  Property="BackgroundColor" Value="White"></Setter>
+        <Setter  Property="Margin" Value="3,3"></Setter>                           
+                            
+        </Style> 
 
 </ResourceDictionary>

@@ -26,10 +26,7 @@
                 
                     <Label Text="Documento:" Style="{StaticResource Contenido}"></Label>
                     <Entry  Placeholder="Documento del propietario" 
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="CenterAndExpand"
-                            BackgroundColor="White"
-                            Margin="5,5"
+                             Style="{StaticResource EntryStyle}"
                             
                             ></Entry>
                 </StackLayout>
