@@ -29,26 +29,19 @@
                         <Label Text="Nombre del empleado:" Style="{StaticResource Contenido}"></Label>
                         <Entry    Placeholder="Nombre " Style="{StaticResource EntryStyle}"></Entry>
                         
-                        <Label Text="Estado de pago:" Style="{StaticResource Contenido}"></Label>
-                        <Picker x:Name="PickerEstadoReserva"
-                            BackgroundColor="Black"
-                            Title="Estado de Pago"
-                            TextColor="White">
-                            <Picker.Items>
-                                <x:String>Pago</x:String>
-                                <x:String>Por Pagar</x:String>
-                            </Picker.Items>
-                        </Picker>
-                        <Label Text="Método de pago:" Style="{StaticResource Contenido}"></Label>
-                        <Picker x:Name="PickerMetodoPagoReserva"
-                             BackgroundColor="Black"
-                            Title="Método de Pago"
-                            TextColor="White">
-                            <Picker.Items>
-                                <x:String>Tarjeta Cinemas</x:String>
-                                <x:String>Efectivo</x:String>
-                            </Picker.Items>
-                        </Picker>
+                        <Label Text="Fecha de nacimiento:" Style="{StaticResource Contenido}"></Label>
+                        <DatePicker></DatePicker>
+
+                        <Label Text="Cédula:" Style="{StaticResource Contenido}"></Label>
+                        <Entry   Placeholder="Cédula" Style="{StaticResource EntryStyle}"></Entry>
+
+                        <Label Text="Contraseña:" Style="{StaticResource Contenido}"></Label>
+                        <Entry  IsPassword="True" Placeholder="Contraseña" Style="{StaticResource EntryStyle}"></Entry>
+
+                        <Label Text="Confirmar contraseña:" Style="{StaticResource Contenido}"></Label>
+                        <Entry   IsPassword="True" Placeholder="Contraseña " Style="{StaticResource EntryStyle}"></Entry>
+
+
                     </StackLayout>
 
 

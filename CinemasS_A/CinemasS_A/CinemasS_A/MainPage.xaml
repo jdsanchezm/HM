@@ -9,29 +9,47 @@
         <BoxView Color="#091146" Opacity="0.4"/>
         
         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
 
-                <StackLayout>
+                <StackLayout Grid.Row="0">
                 
-                <Label  Text="Administrador Cinemas S.A." 
+                <Label  Text="Administrador " 
+                 Style="{StaticResource Titulo}"                                            
+                   />
+                <Label  Text=" Cinemas S.A." 
                  Style="{StaticResource Titulo}"
+                      
                    />
                 <Image Source="Resources\drawable\icon.png"></Image>
-         
-                <Button x:Name="bmenu"
-                        Margin="30,30"
+            </StackLayout>
+            <StackLayout Grid.Row="1" VerticalOptions="Center">
+            <Label Text="Cédula:" Style="{StaticResource Contenido}"></Label>
+                <Entry   Placeholder="Cédula" Style="{StaticResource EntryStyle}"></Entry>
+               
+
+                <Label Text="Contraseña:" Style="{StaticResource Contenido}"></Label>
+                <Entry IsPassword="True"  Placeholder="Contraseña" Style="{StaticResource EntryStyle}"></Entry>
+            </StackLayout>
+            <StackLayout Grid.Row="2" >
+            <Button x:Name="bmenu"
+                       
                         Text="Iniciar"
-                        Style="{StaticResource botonPrincipal}"                       
+                        Style="{StaticResource botonSecundario}"                       
                         ></Button>
                 <Button x:Name="bregistro"
-                        Margin="30,30"
+                   
                         Text="Registrarse"
-                        Style="{StaticResource botonPrincipal}"                       
-                        ></Button>
+                        Style="{StaticResource botonSecundario}"                       
+                       ></Button>
+
             </StackLayout>
 
 
-
-            </Grid>
+        </Grid>
     </Grid>
     
 
