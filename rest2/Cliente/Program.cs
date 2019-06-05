@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using rest2.Models;
 
 namespace Cliente
 {
@@ -16,11 +17,19 @@ namespace Cliente
             HttpClient cliente = new HttpClient();
             cliente.BaseAddress = new Uri("http://localhost:42845/");
             var request = cliente.GetAsync("api/libro").Result;
-            var resultRequest = request.Content.ReadAsStringAsync.;
-            var json = new WebClient().DownloadString(request);
-             dynamic m = JsonConvert.DeserializeObject(json);
-             Console.WriteLine(json);
+            if (request.IsSuccessStatusCode)
+            {
+                var resultstring = request.Content.ReadAsStringAsync().Result;
+              var listado = JsonConvert.DeserializeObject<List<Libro>>(resultstring);
+
+                foreach (var item in resultstring)
+               {
+                 Console.WriteLine(item);                    
+               }
+               
+            }
             Console.ReadLine();
+           
         }
     }
 }

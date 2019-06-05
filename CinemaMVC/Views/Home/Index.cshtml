@@ -5,32 +5,38 @@
 <div class="jumbotron">
     <h1>Administrador Cinemas S.A</h1>
    
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+   
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>@Html.ActionLink("Salas", "Index", "Salas")</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+
+        <h2>Salas</h2>
+        <p>@Html.ActionLink("Vicualizar Salas", "Index", "Salas")</p>
+        <p>@Html.ActionLink("Crear Sala", "Create", "salas")</p>
+        <p>@Html.ActionLink("Eliminar Sala", "Delete", "salas")</p>
+        <p>@Html.ActionLink("Editar Sala", "Edit", "salas")</p>
+
     </div>
     <div class="col-md-4">
-        <h2>@Html.ActionLink("Reservas", "Index", "reservas")</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Reservas</h2>
+        <p>@Html.ActionLink("Visualizar Reservas", "Index", "reservas")</p>
+        <p>@Html.ActionLink("Crear Reserva", "Create", "reservas")</p>
+        <p>@Html.ActionLink("Eliminar Reserva", "Delete", "reservas")</p>
+        <p>@Html.ActionLink("Editar Reserva", "Edit", "reservas")</p>
+
     </div>
     <div class="col-md-4">
-        <h2>@Html.ActionLink("Tarjetas", "Index", "Tarjetas")</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Tarjetas</h2>
+        <p>@Html.ActionLink("Visualizar Tarjetas", "Index", "Tarjetas")</p>
+        <p>@Html.ActionLink("Crear Tarjeta", "Create", "Tarjetas")</p>
+        <p>@Html.ActionLink("Editar Tarjeta", "Edit", "Tarjetas")</p>
+        <p>@Html.ActionLink("Eliminar Tarjeta", "Delete", "Tarjetas")</p>
+
     </div>
     <div class="col-md-4">
         <h2>@Html.ActionLink("Sillas", "Index", "Sillas")</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <p></p>
+       
     </div>
 </div>
