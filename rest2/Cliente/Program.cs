@@ -22,10 +22,12 @@ namespace Cliente
                 var resultstring = request.Content.ReadAsStringAsync().Result;
               var listado = JsonConvert.DeserializeObject<List<Libro>>(resultstring);
 
-                foreach (var item in resultstring)
+                foreach (var item in listado)
                {
-                 Console.WriteLine(item);                    
-               }
+                 Console.WriteLine(item.idLibro);
+                    Console.WriteLine(item.autor);
+                    Console.WriteLine(item.titulo);
+                }
                
             }
             Console.ReadLine();
