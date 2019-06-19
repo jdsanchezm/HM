@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CinemasS_A.CrearTarjeta">
     <ContentPage.Content>
-       
+        <ScrollView>
         <Grid>
             <Image Source="fondocine.png" Aspect="AspectFill" />
             <BoxView Color="#091146" Opacity="0.7"/>
@@ -12,7 +12,7 @@
                 <Grid.RowDefinitions>
                        <RowDefinition Height="30"></RowDefinition>
                     <RowDefinition ></RowDefinition>
-                    <RowDefinition  ></RowDefinition>
+                    <RowDefinition  Height="70"></RowDefinition>
                
                 </Grid.RowDefinitions>
 
@@ -48,6 +48,6 @@
 
             </Grid>
         </Grid>
-      
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

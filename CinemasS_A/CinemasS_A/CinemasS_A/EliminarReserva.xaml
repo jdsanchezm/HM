@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CinemasS_A.EliminarReserva">
     <ContentPage.Content>
-        <ScrollView>
+      
             <Grid>
             <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
             <BoxView Color="#0B1761" Opacity="0.4"/>
@@ -12,10 +12,12 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="70"></RowDefinition>
                 </Grid.RowDefinitions>
 
 
+                    <BoxView Color="#777A8A"
+                         Opacity="0.7" Grid.Row="1"/>
 
                 <StackLayout Grid.Row="1">
                         <Label Text="IdReserva:" Style="{StaticResource Contenido}"></Label>
@@ -24,15 +26,15 @@
 
                     </StackLayout>
 
-                  
-                    <Button x:Name="beliminar"
+                    <StackLayout Grid.Row="2" VerticalOptions="Center">
+                        <Button x:Name="beliminar"
                    
                         Text="Eliminar reserva"
                         Style="{StaticResource botonSecundario}"                       
                        ></Button>
-
+                    </StackLayout>
                 </Grid>
         </Grid>
-        </ScrollView>
+       
     </ContentPage.Content>
 </ContentPage>

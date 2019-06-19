@@ -8,15 +8,8 @@
                 <Image Source="fondocine.png" Aspect="AspectFill" />
             <BoxView Color="#0B1761" Opacity="0.4"/>
 
-            <Grid >
-                    <Grid.RowDefinitions>
-                        <RowDefinition ></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    
-                    </Grid.RowDefinitions>
-
-
-                    <Grid Grid.Row="0">
+                <Grid >
+                    <Grid >
                         <Grid.RowDefinitions>
                             <RowDefinition ></RowDefinition>
                             <RowDefinition></RowDefinition>
@@ -97,18 +90,8 @@
                         <Button Grid.Column="20" Grid.Row="2" Text="B20" Padding="10,10" x:Name="b20"></Button>
 
                     </Grid>
-                    <Grid>
-                        <StackLayout Grid.Row="2" VerticalOptions="Center">
-
-                        <Button x:Name="bmenu"                       
-                        Text="Menu"
-                         
-                        Style="{StaticResource botonSecundario}"                       
-                        ></Button>
-                    </StackLayout>
                 </Grid>
-                </Grid>
-        </Grid>
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

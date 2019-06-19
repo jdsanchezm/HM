@@ -14,7 +14,7 @@
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
                     </Grid.RowDefinitions>
-                </Grid>
+            
                 <BoxView Color="#777A8A"
                       Opacity="0.7" Grid.Row="1"/>
                 <StackLayout Grid.Row="1" VerticalOptions="Center">
@@ -24,6 +24,7 @@
                     <Button x:Name="BPagarReservaConTarjeta" VerticalOptions="Center" Text="Pagar reserva con tarjeta Cinemas" Style="{StaticResource botonSecundario}"></Button>
                 </StackLayout>
             </Grid>
+        </Grid>
       
     </ContentPage.Content>
 </ContentPage>

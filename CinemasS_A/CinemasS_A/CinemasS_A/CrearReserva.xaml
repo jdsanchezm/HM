@@ -12,7 +12,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"></RowDefinition>
                         <RowDefinition Height="*" ></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="80"></RowDefinition>
                     </Grid.RowDefinitions>
 
             
@@ -43,7 +43,7 @@
                     </StackLayout>
                     <StackLayout Grid.Row="2" VerticalOptions="Center">
                             <Button x:Name="btncrearreserva"
-                            
+                            VerticalOptions="Center"
                         Text="Crear Reserva"
                         Style="{StaticResource botonSecundario}"                       
                         ></Button>
