@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <ScrollView>
         <Grid>
-            <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
+                <Image Source="fondocine.png" Aspect="AspectFill" />
             <BoxView Color="#0B1761" Opacity="0.4"/>
             
             <Grid>
@@ -20,7 +20,7 @@
                 <StackLayout Grid.Row="1">
                     <Button x:Name="BCrearTarjeta" Text="Crear nueva Tarjeta" Style="{StaticResource botonSecundario}"></Button>
                     <Button x:Name="BRecargarTarjeta" Text="Recargar Tarjeta" Style="{StaticResource botonSecundario}"></Button>
-                    <Button x:Name="BCrearReserva" Text="Nueva reserva" Style="{StaticResource botonSecundario}"></Button>
+                    <Button x:Name="BCrearReserva" Text="Crear reserva" Style="{StaticResource botonSecundario}"></Button>
                     <Button x:Name="BEliminarReserva" Text="Eliminar reserva" Style="{StaticResource botonSecundario}"></Button>
                      <Button x:Name="BPagarReserva" Text="Pagar Reserva" Style="{StaticResource botonSecundario}"></Button>
                      <Button x:Name="BVisualizarSillas" Text="Visualizar sillas del cine" Style="{StaticResource botonSecundario}"></Button>

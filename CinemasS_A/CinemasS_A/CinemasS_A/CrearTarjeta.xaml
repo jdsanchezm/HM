@@ -3,37 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CinemasS_A.CrearTarjeta">
     <ContentPage.Content>
-      
+       
         <Grid>
-            <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
+            <Image Source="fondocine.png" Aspect="AspectFill" />
             <BoxView Color="#091146" Opacity="0.7"/>
 
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="80"></RowDefinition>
-                    <RowDefinition Height="*" ></RowDefinition>
-                    <RowDefinition Height="30"></RowDefinition>
+                       <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition  ></RowDefinition>
+               
                 </Grid.RowDefinitions>
 
-                <Label Text="Crear Tarjeta"
-                       Style="{StaticResource Titulo}"
-                       Grid.Row="0"/>
+    
                 
                 <BoxView Color="#777A8A"
                          Opacity="0.7" Grid.Row="1"/>
                 <StackLayout Grid.Row="1">
-                  
-                
-                    <Label Text="Documento:" Style="{StaticResource Contenido}"></Label>
-                    <Entry  Placeholder="Documento del propietario" 
-                             Style="{StaticResource EntryStyle}"
-                            
-                            ></Entry>
-                </StackLayout>
 
+                    <Label Text="IdTarjeta:" Style="{StaticResource Contenido}"></Label>
+                    <Entry  x:Name="idtarjeta"    Style="{StaticResource EntryStyle}"     ></Entry>
+
+                    <Label Text="Documento del propietario:" Style="{StaticResource Contenido}"></Label>
+                    <Entry   x:Name="documento"  Style="{StaticResource EntryStyle}"     ></Entry>
+
+                    <Label Text="Saldo:" Style="{StaticResource Contenido}"></Label>
+                    <Entry   x:Name="Saldo"  Placeholder="$70.000" Style="{StaticResource EntryStyle}"     ></Entry>
+
+                    <Label Text="Id del administrador encargado:" Style="{StaticResource Contenido}"></Label>
+                    <Entry   x:Name="idadministrador"  Style="{StaticResource EntryStyle}"     ></Entry>
+
+
+                </StackLayout>
+                <StackLayout Grid.Row="2" VerticalOptions="Center">
+
+                  
+                    <Button x:Name="bcreartarjeta"                       
+                        Text="Crear tarjeta"
+                         
+                        Style="{StaticResource botonSecundario}"                       
+                        ></Button>
+                </StackLayout>
 
             </Grid>
         </Grid>
-     
+      
     </ContentPage.Content>
 </ContentPage>

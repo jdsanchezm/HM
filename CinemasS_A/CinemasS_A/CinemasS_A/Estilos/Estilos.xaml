@@ -14,43 +14,36 @@
     <x:String x:Key="HorizontalEnd">End</x:String>
 
     <Style TargetType="Button" x:Key="botonSecundario">
-
         <Setter Property="FontSize" Value="{StaticResource tamanoFuentePequeño}"></Setter>
-        <Setter Property="BackgroundColor" Value="#090D23"></Setter>
-        <Setter Property="VerticalOptions" Value="Center"></Setter>
+        <Setter Property="BackgroundColor" Value="#090D23"></Setter>    
         <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
         <Setter Property="BorderRadius" Value="7"></Setter>
         <Setter Property="Padding" Value="15"></Setter>
         <Setter Property="Margin" Value="2"></Setter>
-
         <Setter Property="TextColor" Value="{StaticResource colorTitulo}"></Setter>
-
-
-
-    </Style>
+     </Style>
+    
     <Style TargetType="Label" x:Key="Titulo">
-        <Setter  Property="VerticalOptions" Value="StartAndExpand"  ></Setter>
-        <Setter Property="Margin" Value="20,0,0,0"></Setter>
+        <Setter  Property="VerticalOptions" Value="StartAndExpand"  ></Setter>      
         <Setter Property="HorizontalOptions" Value="Center"></Setter>
         <Setter Property="FontAttributes" Value="Bold"></Setter>   
-        <Setter Property="FontSize" Value="30"></Setter>
-        <Setter Property="TextColor" Value="White"></Setter>
-        
+        <Setter Property="FontSize" Value="38"></Setter>
+        <Setter Property="TextColor" Value="White"></Setter>        
     </Style>
+    
     <Style TargetType="Label" x:Key="Contenido">
         <Setter  Property="VerticalOptions" Value="CenterAndExpand"  ></Setter>        
         <Setter Property="HorizontalOptions" Value="End"></Setter>     
         <Setter Property="FontSize" Value="Medium"></Setter>
-        <Setter Property="TextColor" Value="DarkGray"></Setter>
-
+        <Setter Property="TextColor" Value="#292929"></Setter>
     </Style>
-    <Style TargetType="Entry" x:Key="EntryStyle">
-   
+    
+    <Style TargetType="Entry" x:Key="EntryStyle">   
         <Setter  Property="HorizontalOptions" Value="FillAndExpand"></Setter>
         <Setter  Property="VerticalOptions" Value="Center"></Setter>
         <Setter  Property="BackgroundColor" Value="White"></Setter>
-        <Setter  Property="Margin" Value="3,3"></Setter>                           
-                            
-        </Style> 
+        <Setter  Property="Margin" Value="2,2"></Setter> 
+        
+     </Style> 
 
 </ResourceDictionary>

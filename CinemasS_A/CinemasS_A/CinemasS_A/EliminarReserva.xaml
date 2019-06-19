@@ -18,11 +18,20 @@
 
 
                 <StackLayout Grid.Row="1">
-                    <Label Text="Eliminar Reserva" Style="{StaticResource Titulo}"/>
-                </StackLayout>
+                        <Label Text="IdReserva:" Style="{StaticResource Contenido}"></Label>
+                        <Entry    Style="{StaticResource EntryStyle}"></Entry>
 
 
-            </Grid>
+                    </StackLayout>
+
+                  
+                    <Button x:Name="beliminar"
+                   
+                        Text="Eliminar reserva"
+                        Style="{StaticResource botonSecundario}"                       
+                       ></Button>
+
+                </Grid>
         </Grid>
         </ScrollView>
     </ContentPage.Content>

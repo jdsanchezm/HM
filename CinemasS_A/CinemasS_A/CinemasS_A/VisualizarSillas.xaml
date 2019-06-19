@@ -3,25 +3,112 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CinemasS_A.VisualizarSillas">
     <ContentPage.Content>
+        <ScrollView>
         <Grid>
-            <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
+                <Image Source="fondocine.png" Aspect="AspectFill" />
             <BoxView Color="#0B1761" Opacity="0.4"/>
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="30"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="30"></RowDefinition>
-                </Grid.RowDefinitions>
+            <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition ></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    
+                    </Grid.RowDefinitions>
 
 
+                    <Grid Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition ></RowDefinition>
 
-                <StackLayout Grid.Row="1">
-           
-                </StackLayout>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="1" Grid.Row="1" Text="A1" Padding="10,10" x:Name="a1"></Button>
+                        <Button Grid.Column="2" Grid.Row="1" Text="A2" Padding="10,10" x:Name="a2"></Button>
+                        <Button Grid.Column="3" Grid.Row="1" Text="A3" Padding="10,10" x:Name="a3"></Button>
+                        <Button Grid.Column="4" Grid.Row="1" Text="A4" Padding="10,10" x:Name="a4"></Button>
+                        <Button Grid.Column="5" Grid.Row="1" Text="A5" Padding="10,10" x:Name="a5"></Button>
+                        <Button Grid.Column="6" Grid.Row="1" Text="A6" Padding="10,10" x:Name="a6"></Button>
+                        <Button Grid.Column="7" Grid.Row="1" Text="A7" Padding="10,10" x:Name="a7"></Button>
+                        <Button Grid.Column="8" Grid.Row="1" Text="A8" Padding="10,10" x:Name="a8"></Button>
+                        <Button Grid.Column="9" Grid.Row="1" Text="A9" Padding="10,10" x:Name="a9"></Button>
+                        <Button Grid.Column="10" Grid.Row="1" Text="A10" Padding="10,10" x:Name="a10"></Button>
+                        <Button Grid.Column="11" Grid.Row="1" Text="A11" Padding="10,10" x:Name="a11"></Button>
+                        <Button Grid.Column="12" Grid.Row="1" Text="A12" Padding="10,10" x:Name="a12"></Button>
+                        <Button Grid.Column="13" Grid.Row="1" Text="A13" Padding="10,10" x:Name="a13"></Button>
+                        <Button Grid.Column="14" Grid.Row="1" Text="A14" Padding="10,10" x:Name="a14"></Button>
+                        <Button Grid.Column="15" Grid.Row="1" Text="A15" Padding="10,10" x:Name="a15"></Button>
+                        <Button Grid.Column="16" Grid.Row="1" Text="A16" Padding="10,10" x:Name="a16"></Button>
+                        <Button Grid.Column="17" Grid.Row="1" Text="A17" Padding="10,10" x:Name="a17"></Button>
+                        <Button Grid.Column="18" Grid.Row="1" Text="A18" Padding="10,10" x:Name="a18"></Button>
+                        <Button Grid.Column="19" Grid.Row="1" Text="A19" Padding="10,10" x:Name="a19"></Button>
+                        <Button Grid.Column="20" Grid.Row="1" Text="A20" Padding="10,10" x:Name="a20"></Button>
 
+                        <Button Grid.Column="1" Grid.Row="2" Text="B1" Padding="10,10" x:Name="b1"></Button>
+                        <Button Grid.Column="2" Grid.Row="2" Text="B2" Padding="10,10" x:Name="b2"></Button>
+                        <Button Grid.Column="3" Grid.Row="2" Text="B3" Padding="10,10" x:Name="b3"></Button>
+                        <Button Grid.Column="4" Grid.Row="2" Text="B4" Padding="10,10" x:Name="b4"></Button>
+                        <Button Grid.Column="5" Grid.Row="2" Text="B5" Padding="10,10" x:Name="b5"></Button>
+                        <Button Grid.Column="6" Grid.Row="2" Text="B6" Padding="10,10" x:Name="b6"></Button>
+                        <Button Grid.Column="7" Grid.Row="2" Text="B7" Padding="10,10" x:Name="b7"></Button>
+                        <Button Grid.Column="8" Grid.Row="2" Text="B8" Padding="10,10" x:Name="b8"></Button>
+                        <Button Grid.Column="9" Grid.Row="2" Text="B9" Padding="10,10" x:Name="b9"></Button>
+                        <Button Grid.Column="10" Grid.Row="2" Text="B10" Padding="10,10" x:Name="b10"></Button>
+                        <Button Grid.Column="11" Grid.Row="2" Text="B11" Padding="10,10" x:Name="b11"></Button>
+                        <Button Grid.Column="12" Grid.Row="2" Text="B12" Padding="10,10" x:Name="b12"></Button>
+                        <Button Grid.Column="13" Grid.Row="2" Text="B13" Padding="10,10" x:Name="b13"></Button>
+                        <Button Grid.Column="14" Grid.Row="2" Text="B14" Padding="10,10" x:Name="b14"></Button>
+                        <Button Grid.Column="15" Grid.Row="2" Text="B15" Padding="10,10" x:Name="b15"></Button>
+                        <Button Grid.Column="16" Grid.Row="2" Text="B16" Padding="10,10" x:Name="b16"></Button>
+                        <Button Grid.Column="17" Grid.Row="2" Text="B17" Padding="10,10" x:Name="b17"></Button>
+                        <Button Grid.Column="18" Grid.Row="2" Text="B18" Padding="10,10" x:Name="b18"></Button>
+                        <Button Grid.Column="19" Grid.Row="2" Text="B19" Padding="10,10" x:Name="b19"></Button>
+                        <Button Grid.Column="20" Grid.Row="2" Text="B20" Padding="10,10" x:Name="b20"></Button>
 
-            </Grid>
+                    </Grid>
+                    <Grid>
+                        <StackLayout Grid.Row="2" VerticalOptions="Center">
+
+                        <Button x:Name="bmenu"                       
+                        Text="Menu"
+                         
+                        Style="{StaticResource botonSecundario}"                       
+                        ></Button>
+                    </StackLayout>
+                </Grid>
+                </Grid>
         </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

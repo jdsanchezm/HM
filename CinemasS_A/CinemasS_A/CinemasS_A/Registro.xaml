@@ -5,45 +5,52 @@
     <ContentPage.Content>
         <ScrollView>
             <Grid>
-                <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
+                <Image Source="fondocine.png" Aspect="AspectFill" />
                 <BoxView Color="#0B1761" Opacity="0.4"/>
 
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
                         <RowDefinition Height="*" ></RowDefinition>
-                        <RowDefinition Height="30"></RowDefinition>
-                    </Grid.RowDefinitions>
-
-                    <Label Text="Registrarse"
-                       Style="{StaticResource Titulo}"
-                       Grid.Row="0"/>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>             
 
                     <BoxView Color="#777A8A"
                       Opacity="0.7" Grid.Row="1"/>
                     <StackLayout Grid.Row="1">
+                        <Label Text="IdAdministrador:" Style="{StaticResource Contenido}"></Label>
+                        <Entry  x:Name="idadministrador"  Style="{StaticResource EntryStyle}"></Entry>  
 
-                        <Label Text="Cédula:" Style="{StaticResource Contenido}"></Label>
-                        <Entry   Placeholder="Cédula" Style="{StaticResource EntryStyle}"></Entry>
+                        <Label Text="Nombre:" Style="{StaticResource Contenido}"></Label>
+                        <Entry   x:Name="nombre"  Style="{StaticResource EntryStyle}"></Entry>
+                        
+                        <Label Text="Documento:" Style="{StaticResource Contenido}"></Label>
+                        <Entry  x:Name="documento"  Style="{StaticResource EntryStyle}"></Entry>
 
-                        <Label Text="Nombre del empleado:" Style="{StaticResource Contenido}"></Label>
-                        <Entry    Placeholder="Nombre " Style="{StaticResource EntryStyle}"></Entry>
+                        <Label Text="Correo:" Style="{StaticResource Contenido}"></Label>
+                        <Entry   x:Name="correo"  Style="{StaticResource EntryStyle}"></Entry>
+
+                        <Label Text="Teléfono:" Style="{StaticResource Contenido}"></Label>
+                        <Entry    x:Name="telefono" Style="{StaticResource EntryStyle}"></Entry>
                         
                         <Label Text="Fecha de nacimiento:" Style="{StaticResource Contenido}"></Label>
-                        <DatePicker></DatePicker>
-
-                        <Label Text="Cédula:" Style="{StaticResource Contenido}"></Label>
-                        <Entry   Placeholder="Cédula" Style="{StaticResource EntryStyle}"></Entry>
+                        <DatePicker  x:Name="fechanacimiento"></DatePicker>
 
                         <Label Text="Contraseña:" Style="{StaticResource Contenido}"></Label>
-                        <Entry  IsPassword="True" Placeholder="Contraseña" Style="{StaticResource EntryStyle}"></Entry>
+                        <Entry  x:Name="contraseña"  IsPassword="True"  Style="{StaticResource EntryStyle}"></Entry>
 
                         <Label Text="Confirmar contraseña:" Style="{StaticResource Contenido}"></Label>
-                        <Entry   IsPassword="True" Placeholder="Contraseña " Style="{StaticResource EntryStyle}"></Entry>
-
+                        <Entry  x:Name="confcontraseña"  IsPassword="True" Style="{StaticResource EntryStyle}"></Entry>
 
                     </StackLayout>
-
+                    <StackLayout Grid.Row="2" VerticalOptions="Center">
+                     
+                        <Button x:Name="bregistro"
+                         VerticalOptions="Center"
+                        Text="Enviar registro"
+                        Style="{StaticResource botonSecundario}"                       
+                       ></Button>
+                    </StackLayout>
 
                 </Grid>
 

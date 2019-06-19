@@ -3,59 +3,54 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CinemasS_A.CrearReserva">
     <ContentPage.Content>
-        <ScrollView>
-        <Grid>
-            <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
-            <BoxView Color="#0B1761" Opacity="0.4"/>
-
+       
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="80"></RowDefinition>
-                    <RowDefinition Height="*" ></RowDefinition>
-                    <RowDefinition Height="30"></RowDefinition>
-                </Grid.RowDefinitions>
+                <Image Source="fondocine.png" Aspect="AspectFill" />
+                <BoxView Color="#0B1761" Opacity="0.4"/>
 
-                <Label Text="Crear Reserva"
-                       Style="{StaticResource Titulo}"
-                       Grid.Row="0"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="*" ></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
 
-                <BoxView Color="#777A8A"
+            
+
+                    <BoxView Color="#777A8A"
                          Opacity="0.7" Grid.Row="1"/>
-                <StackLayout Grid.Row="1">
+                    <StackLayout Grid.Row="1">
+                        <Label Text="Id Reserva:" Style="{StaticResource Contenido}"></Label>
+                        <Entry x:Name="idreserva"  Style="{StaticResource EntryStyle}"  ></Entry>
 
+                        <Label Text="Documento cliente:" Style="{StaticResource Contenido}"></Label>
+                        <Entry x:Name="documentocliente"  Style="{StaticResource EntryStyle}"  ></Entry>
 
-                    <Label Text="Cédula:" Style="{StaticResource Contenido}"></Label>
-                        <Entry   Placeholder="Cedula"   Style="{StaticResource EntryStyle}"  ></Entry>                   
-                    
-                    <Label Text="Sillas:" Style="{StaticResource Contenido}"></Label>
+                        <Label Text="Sillas:" Style="{StaticResource Contenido}"></Label>
                         <Entry    Placeholder="Sillas"  Style="{StaticResource EntryStyle}" ></Entry>
-                    
-                    <Label Text="Estado de pago:" Style="{StaticResource Contenido}"></Label>
-                    <Picker x:Name="PickerEstadoReserva"
+
+                        <Label Text="Estado de pago:" Style="{StaticResource Contenido}"></Label>
+                        <Picker x:Name="PickerEstadoReserva"
                             BackgroundColor="Black"
                             Title="Estado de Pago"
                             TextColor="White">
-                        <Picker.Items>
-                            <x:String>Pago</x:String>
-                            <x:String>Por Pagar</x:String>                                                    
-                        </Picker.Items>                        
-                    </Picker>
-                    <Label Text="Método de pago:" Style="{StaticResource Contenido}"></Label>
-                    <Picker x:Name="PickerMetodoPagoReserva"
-                             BackgroundColor="Black"
-                            Title="Método de Pago"
-                            TextColor="White">
-                        <Picker.Items>
-                            <x:String>Tarjeta Cinemas</x:String>
-                            <x:String>Efectivo</x:String>
-                        </Picker.Items>
-                    </Picker>
-                </StackLayout>
-
-
-            </Grid>      
-
-        </Grid>
-        </ScrollView>
+                            <Picker.Items>
+                                <x:String>Pago</x:String>
+                                <x:String>Por Pagar</x:String>
+                            </Picker.Items>
+                        </Picker>
+                      
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" VerticalOptions="Center">
+                            <Button x:Name="btncrearreserva"
+                            
+                        Text="Crear Reserva"
+                        Style="{StaticResource botonSecundario}"                       
+                        ></Button>
+                  
+                    </StackLayout>
+                </Grid>
+            </Grid>
+   
     </ContentPage.Content>
 </ContentPage>

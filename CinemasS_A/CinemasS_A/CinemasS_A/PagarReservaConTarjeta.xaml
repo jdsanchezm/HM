@@ -3,25 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CinemasS_A.PagarReservaConTarjeta">
     <ContentPage.Content>
-        <Grid>
-            <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
+        <ScrollView>
+            <Grid>
+                <Image Source="fondocine.png" Aspect="AspectFill" />
             <BoxView Color="#0B1761" Opacity="0.4"/>
 
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
 
 
-
-                <StackLayout Grid.Row="1">
-                  
-                </StackLayout>
-
-
-            </Grid>
+                    <BoxView Color="#777A8A"
+                      Opacity="0.7" Grid.Row="1"/>
+                    <StackLayout Grid.Row="1">
+                        <Label Text="Id reserva:" Style="{StaticResource Contenido}"></Label>
+                        <Entry    Style="{StaticResource EntryStyle}"></Entry>
+                        <Label Text="Id tarjeta:" Style="{StaticResource Contenido}"></Label>
+                        <Entry    Style="{StaticResource EntryStyle}"></Entry>
+                        <Label Text="Recuerde que pagando con su tarjeta Cinemas recibe un 10% de descuento." Style="{StaticResource Contenido}"></Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" VerticalOptions="Center">
+                        <Button x:Name="bmenu"
+                             VerticalOptions="Center"
+                        Text="Menu"
+                        Style="{StaticResource botonSecundario}"                       
+                        ></Button>
+                <Button x:Name="befectuarpagotarjeta"
+                         VerticalOptions="Center"
+                        Text="Efectuar Pago"
+                        Style="{StaticResource botonSecundario}"                       
+                       ></Button>
+                    </StackLayout>
+                </Grid>
         </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

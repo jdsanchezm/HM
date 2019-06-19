@@ -3,25 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CinemasS_A.PagarReservaEnEfectivo">
     <ContentPage.Content>
-        <Grid>
-            <Image Source="https://wallpaperplay.com/walls/full/4/f/1/68237.jpg" Aspect="AspectFill" />
+      
+            <Grid>
+                <Image Source="fondocine.png" Aspect="AspectFill" />
             <BoxView Color="#0B1761" Opacity="0.4"/>
 
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
 
 
+                    <BoxView Color="#777A8A"
+                      Opacity="0.7" Grid.Row="1"/>
+                    <StackLayout Grid.Row="1">
+                        <Label Text="Id Reserva:" Style="{StaticResource Contenido}"></Label>
+                        <Entry    Style="{StaticResource EntryStyle}"></Entry>
+                    </StackLayout>
 
-                <StackLayout Grid.Row="1">
-                  
-                </StackLayout>
+                    <StackLayout Grid.Row="2" VerticalOptions="Center">
+                            
+                        <Button x:Name="befectuarpagoefectivo"
+                         VerticalOptions="End"
+                        Text="Efectuar Pago"
+                        Style="{StaticResource botonSecundario}"                       
+                       ></Button>
+                        <Button x:Name="bmenu"
+                             VerticalOptions="End"
+                        Text="Menu"
+                        Style="{StaticResource botonSecundario}"                       
+                        ></Button>
+                    </StackLayout>
 
-
-            </Grid>
+                </Grid>
         </Grid>
+   
     </ContentPage.Content>
 </ContentPage>
